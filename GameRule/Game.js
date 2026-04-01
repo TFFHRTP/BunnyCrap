@@ -177,6 +177,57 @@ var Game={
         }
         return atlasRects[sheetKey] || atlasRects.mercenary;
     },
+    getBunnyRenderId:function(chara){
+        switch (Game.getBunnyVariant(chara)){
+            case "zergling":
+                return (chara.name=="Drone") ? "BunnyRender_baneling" : "BunnyRender_zergling";
+            case "hydralisk":
+                return "BunnyRender_hydralisk";
+            case "mutalisk":
+                return "BunnyRender_mutalisk";
+            case "ultralisk":
+                return (chara.name=="InfestedTerran") ? "BunnyRender_infested" : "BunnyRender_ultralisk";
+            case "marine":
+                return "BunnyRender_marine";
+            case "marauder":
+                return "BunnyRender_marauder";
+            case "reaper":
+                return (chara.name=="Sarah" || chara.name=="Kerrigan") ? "BunnyRender_dev" : "BunnyRender_reaper";
+            case "tank":
+                return "BunnyRender_tank";
+            case "battlecruiser":
+                return "BunnyRender_battlecruiser";
+            case "zealot":
+                return "BunnyRender_zealot";
+            case "stalker":
+                return "BunnyRender_stalker";
+            case "templar":
+                return "BunnyRender_templar";
+            case "archon":
+                return "BunnyRender_archon";
+            case "carrier":
+                return "BunnyRender_carrier";
+            case "xelnaga":
+                return "BunnyRender_xelnaga";
+            case "critter":
+                return "BunnyRender_critter";
+            default:
+                return "BunnyRender_mercenary";
+        }
+    },
+    drawBunnyRenderSprite:function(cxt,chara){
+        var render=sourceLoader.sources[Game.getBunnyRenderId(chara)];
+        if (!render) return false;
+        var drawHeight=Math.max(chara.height*1.7,render.height*0.36);
+        if (chara.name=="Tank" || chara.name=="BattleCruiser" || chara.name=="Carrier" || chara.name=="HeroCruiser") {
+            drawHeight*=1.12;
+        }
+        var drawWidth=drawHeight*(render.width/render.height);
+        var drawX=chara.posX()-Map.offsetX-drawWidth/2;
+        var drawY=chara.posY()-Map.offsetY-drawHeight*0.76;
+        cxt.drawImage(render,drawX>>0,drawY>>0,drawWidth>>0,drawHeight>>0);
+        return true;
+    },
     drawBunnyAtlasSprite:function(cxt,chara){
         var atlas=sourceLoader.sources.BunnyAtlas;
         if (!atlas) return false;
@@ -640,6 +691,7 @@ var Game={
     },
     drawUnitSprite:function(cxt,imgSrc,chara,charaX,charaY){
         if (Game.shouldDrawBunnyMount(chara)) {
+            if (Game.drawBunnyRenderSprite(cxt,chara)) return;
             if (Game.drawBunnyAtlasSprite(cxt,chara)) return;
             Game.drawMountedArmor(cxt,chara,charaX,charaY);
             return;
@@ -782,6 +834,26 @@ var Game={
         sourceLoader.load("img","img/Bg/GameWin.jpg","GameWin");
         sourceLoader.load("img","img/Bg/GameLose.jpg","GameLose");
         sourceLoader.load("img","img/Bunny/bunnycrap_char.png","BunnyAtlas");
+        sourceLoader.load("img","assets/renders/archon-bunny.png","BunnyRender_archon");
+        sourceLoader.load("img","assets/renders/baneling-bunny.png","BunnyRender_baneling");
+        sourceLoader.load("img","assets/renders/battlecruiser-bunny.png","BunnyRender_battlecruiser");
+        sourceLoader.load("img","assets/renders/carrier-bunny.png","BunnyRender_carrier");
+        sourceLoader.load("img","assets/renders/critter-bunny.png","BunnyRender_critter");
+        sourceLoader.load("img","assets/renders/dev-bunny.png","BunnyRender_dev");
+        sourceLoader.load("img","assets/renders/high-templar-bunny.png","BunnyRender_templar");
+        sourceLoader.load("img","assets/renders/hydralisk-bunny.png","BunnyRender_hydralisk");
+        sourceLoader.load("img","assets/renders/infested-bunny.png","BunnyRender_infested");
+        sourceLoader.load("img","assets/renders/marauder-bunny.png","BunnyRender_marauder");
+        sourceLoader.load("img","assets/renders/marine-bunny.png","BunnyRender_marine");
+        sourceLoader.load("img","assets/renders/mercenary-bunny.png","BunnyRender_mercenary");
+        sourceLoader.load("img","assets/renders/mutalisk-bunny.png","BunnyRender_mutalisk");
+        sourceLoader.load("img","assets/renders/reaper-bunny.png","BunnyRender_reaper");
+        sourceLoader.load("img","assets/renders/seige-tank-bunny.png","BunnyRender_tank");
+        sourceLoader.load("img","assets/renders/stalker-bunny.png","BunnyRender_stalker");
+        sourceLoader.load("img","assets/renders/ultralisk-bunny.png","BunnyRender_ultralisk");
+        sourceLoader.load("img","assets/renders/xelnaga-bunny.png","BunnyRender_xelnaga");
+        sourceLoader.load("img","assets/renders/zealot-bunny.png","BunnyRender_zealot");
+        sourceLoader.load("img","assets/renders/zergling-bunny.png","BunnyRender_zergling");
 
         sourceLoader.allOnLoad(function(){
             $('#GameStart').prepend(sourceLoader.sources['GameStart']);
