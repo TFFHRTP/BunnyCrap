@@ -1,0 +1,25 @@
+{
+  "style": "stylized 3D hero character for an RTS, soft fur, hard-surface armor, cinematic rim light, strong silhouette, transparent background, 3/4 front angle, game-ready readability",
+  "units": {
+    "Zergling Bunny": "Small feral bunny creature, dark brown fur, jagged organic carapace, sharp grin, aggressive forward lean, zerg bio-horror styling, readable from isometric camera, stylized 3D render, transparent background.",
+    "Baneling Bunny": "Cream bunny with oversized glowing green acid sac on its back, cute but dangerous, rounded silhouette, zerg bio-plating and slime glow, stylized 3D render, transparent background.",
+    "Hydralisk Bunny": "Assault bunny with layered chest carapace, spined crown, organic plated face, thick forequarters, zerg hydralisk-inspired silhouette, stylized 3D render, transparent background.",
+    "Mutalisk Bunny": "Dark rabbit creature with leathery wings, red glowing eyes, low predatory body, wing silhouette readable from above, stylized 3D render, transparent background.",
+    "Ultralisk Bunny": "Massive siege bunny with horned forehead, heavy bio-armor, broad plated back, intimidating tank-like mass, stylized 3D render, transparent background.",
+    "Marine Bunny": "White bunny in rounded blue powered infantry armor, starcraft terran marine-inspired, oversized shoulder plates, chest armor, compact readable silhouette, stylized 3D render, transparent background.",
+    "Marauder Bunny": "Heavy black and orange combat bunny with missile pods mounted over the shoulders, thick armored body, terran marauder styling, stylized 3D render, transparent background.",
+    "Reaper Bunny": "Dark agile bunny in tactical armor with goggles and thruster pack, orange exhaust flares, terran reaper styling, stylized 3D render, transparent background.",
+    "Siege Tank Bunny": "Rabbit integrated into a mini siege tank chassis, visible bunny face with tracked lower body and cannon assembly, one cohesive character, stylized 3D render, transparent background.",
+    "Battlecruiser Bunny": "Rabbit integrated into a heavy battlecruiser-inspired armored vehicle shell, large plated mass, command-vehicle energy, one cohesive character, stylized 3D render, transparent background.",
+    "Zealot Bunny": "Cream bunny with glowing cyan psi blades and elegant protoss harness, noble heroic expression, stylized 3D render, transparent background.",
+    "Stalker Bunny": "Dark stealth-tech bunny with blue visor, black armor shell, orange thrusters, protoss stalker-inspired, stylized 3D render, transparent background.",
+    "High Templar Bunny": "White rabbit in blue and gold ceremonial robes and armor, floating energy motes, mystic protoss caster styling, stylized 3D render, transparent background.",
+    "Archon Bunny": "Pure energy rabbit silhouette, cosmic blue-violet glow, no visible fur detail, magical plasma body, stylized 3D render, transparent background.",
+    "Carrier Bunny": "Rabbit fused with elegant gold protoss carrier armor shell, blue visor, sleek fins, living ship-rabbit hybrid, stylized 3D render, transparent background.",
+    "Xel'Naga Bunny": "Mystical cosmic bunny with deep indigo body and starfield emissive pattern, ancient alien presence, stylized 3D render, transparent background.",
+    "Infested Bunny": "Corrupted rabbit with blackened armor, red infection nodes, asymmetrical growths, hostile infested styling, stylized 3D render, transparent background.",
+    "Mercenary Bunny": "Rugged gray combat bunny with scavenged military armor and green helmet, practical mercenary silhouette, stylized 3D render, transparent background.",
+    "Critter Bunny": "Clean white bunny with floral collar and warm friendly personality, simple charming shape, stylized 3D render, transparent background.",
+    "Dev Bunny": "Black bunny in hoodie with glasses, polished cute mascot character, stylized 3D render, transparent background."
+  }
+}
